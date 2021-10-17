@@ -22,6 +22,10 @@ Shape
         return this._sideLengths[0]*this._sideLengths[1];
     };
 
+    Shape.prototype.toString = function(){  //dodanie funkcji toString, której nie ma na tym obiekcie
+        return "[object " + this.name +"]";
+    };
+
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -58,8 +62,8 @@ Shape
     Triangle.prototype=Object.create(Shape.prototype);
     Triangle.prototype.constructor=Triangle;
 
-    function Triangle(sideLengths){
-        var a = _sideLengths[0];
+    function getArea(sideLengths){
+        var a = sideLengths[0];
         return +((a*a*Math.sqrt(3))/4).toFixed(2);
 
     }
