@@ -31,8 +31,8 @@ Shape
         this.name="Prostokąt";
     }
 
-    Rectangle.prototype=Object.create(Shape.prototype);
-    Rectangle.prototype.constructor=Rectangle;
+    Rectangle.prototype=Object.create(Shape.prototype); //przypisanie zupełnie nowego obiektu, którego prototypem jest Shape, nie kieruje bezpośrenio na Shape ale pośrednio nie ingerując w rodzica
+    Rectangle.prototype.constructor=Rectangle; //stworzenie nowego konstruktora
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
